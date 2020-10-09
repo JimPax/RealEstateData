@@ -1,0 +1,135 @@
+{
+    "saleData":[
+        {
+            "id": 1,
+            "price": 200,
+            "city": "Thessaloniki",
+            "date": "Jul",
+            "year": "2019",
+            "latitude": "40.6319",
+            "longitude": "22.9440",
+            "district": "thermi"
+        },
+        {
+            "id": 2,
+            "price": 150,
+            "city": "Thessaloniki",
+            "date": "May",
+            "year": "2019",
+            "latitude": "40.638858",
+            "longitude": "22.952681",
+            "district": "charilaou"
+        },
+        {
+            "id": 3,
+            "price": 200,
+            "city": "Thessaloniki",
+            "date": "Dec",
+            "year": "2019",
+            "latitude": "40.639745",
+            "longitude": "22.944924",
+            "district": "kalamaria"
+        },
+        {
+            "id": 4,
+            "price": 250,
+            "city": "Thessaloniki",
+            "date": "Oct",
+            "year": "2018",
+            "latitude": "40.643847",
+            "longitude": "22.932320",
+            "district": "charilaou"
+        },
+        {
+            "id": 5,
+            "price": 100,
+            "city": "Thessaloniki",
+            "date": "Nov",
+            "year": "2018",
+            "latitude": "40.650778",
+            "longitude": "22.924748",
+            "district": "kalamaria"
+        },
+        {
+            "id": 6,
+            "price": 300,
+            "city": "Athens",
+            "date": "Jul",
+            "year": "2019",
+            "latitude": "38.034708",
+            "longitude": "23.737980",
+            "district": "centre"
+        },
+        {
+            "id": 7,
+            "price": 200,
+            "city": "Athens",
+            "date": "Mar",
+            "year": "2019",
+            "latitude": "38.016120",
+            "longitude": "23.691111",
+            "district": "marousi"
+
+        },
+        {
+            "id": 8,
+            "price": 400,
+            "city": "Athens",
+            "date": "May",
+            "year": "2018",
+            "latitude": "37.989212",
+            "longitude": "23.677149",
+            "district": "chalandri"
+        },
+        {
+            "id": 9,
+            "price": 350,
+            "city": "Athens",
+            "date": "Jun",
+            "year": "2018",
+            "latitude": "37.979814",
+            "longitude": "23.721150",
+            "district": "peristeri"
+        },
+        {
+            "id": 10,
+            "price": 250,
+            "city": "Athens",
+            "date": "Sep",
+            "year": "2018",
+            "latitude": "37.983498",
+            "longitude": "23.733514",
+            "district": "centre"
+        },
+        {
+            "id": 11,
+            "price": 100,
+            "city": "Patra",
+            "date": "Sep",
+            "year": "2019",
+            "latitude": "38.235193",
+            "longitude": "21.740157",
+            "district": "centre"
+        },
+        {
+            "id": 12,
+            "price": 150,
+            "city": "Patra",
+            "date": "Sep",
+            "year": "2019",
+            "latitude": "38.240469",
+            "longitude": "21.743073",
+            "district": "agyia"
+        },
+        {
+            "id": 13,
+            "price": 120,
+            "city": "Patra",
+            "date": "Sep",
+            "year": "2018",
+            "latitude": "38.253091",
+            "longitude": "21.741735",
+            "district": "paralia"
+        }
+    ]
+}
