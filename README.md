@@ -1,6 +1,6 @@
 # realestate
 
-> A Vue.js project
+> A Vue.js project on housing data(mock data) for real estate price statistics. Graphs and maps by region and season are used.
 
 ## Build Setup
 
