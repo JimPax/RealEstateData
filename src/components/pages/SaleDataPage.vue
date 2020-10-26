@@ -85,6 +85,11 @@ export default {
         background-color: #4b4b4b;
         color: #ffffff;
     }
+    @media screen and (max-width: 600px) {
+    #sub-header h2{
+        font-size: 30px;
+        }
+    }
     th{
         color: #d5d6d2;
 

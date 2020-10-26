@@ -5,7 +5,7 @@
             <div id="sub-header" class="row justify-content-center">
                 <h2 class="pt-3">Housing Data For Rent</h2>
             </div>
-            <div id="charts" class="row justify-content-md-center py-md-5">
+            <div id="charts" class="row justify-content-center py-md-5">
                 <div class="card-group col-12">
                     <div class="card col-md-6 mx-md-5">
                         <div class="card-body">
