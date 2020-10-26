@@ -40,11 +40,11 @@
 </template>
 
 <script>
-import NavigationBar from './NavigationBar.vue'
-import PriceByMonthChart  from "./statisticalCharts/PriceByMonthChart.vue"
-import PriceByCityChart from "./statisticalCharts/PriceByCityChart.vue"
-import Map from './Map.vue'
-import MapResult from "./MapResult.vue"
+import NavigationBar from '../NavigationBar.vue'
+import PriceByMonthChart  from "../statisticalCharts/PriceByMonthChart"
+import PriceByCityChart from "../statisticalCharts/PriceByCityChart"
+import Map from '../Map.vue'
+import MapResult from "../MapResult.vue"
 import {mapGetters} from 'vuex'
 
 export default {

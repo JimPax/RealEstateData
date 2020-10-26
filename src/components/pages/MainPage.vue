@@ -14,28 +14,28 @@
         </header>
         <div class="card-deck col-md-12 my-5">
             <div class="card">
-                <img class="card-img-top" src="../assets/img/mcard1.png" alt="Card image cap">
+                <img class="card-img-top" src="../../assets/img/mcard1.png" alt="Card image cap">
                 <div class="card-body">
                 <h5 class="card-title">Real Estate Data Charts</h5>
                 <p class="card-text">Data charts for real estate to rent or sale, by every city at any year or month.</p>
                 <button class="btn btn-dark" role="button"><a class="nav-link" href="/rent-data#charts">Rent</a></button>
-                <button class="btn btn-dark" role="button"><router-link class="nav-link" :to="{name: 'SaleDataPage'}">Sale</router-link></button>
+                <button class="btn btn-dark" role="button"><a class="nav-link" href="/sale-data#charts">Sale</a></button>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="../assets/img/mcard2.png" alt="Card image cap">
+                <img class="card-img-top" src="../../assets/img/mcard2.png" alt="Card image cap">
                 <div class="card-body">
                 <h5 class="card-title">Real Estate Predictions</h5>
                 <p class="card-text">Future Features..</p>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top" src="../assets/img/mcard3.png" alt="Card image cap">
+                <img class="card-img-top" src="../../assets/img/mcard3.png" alt="Card image cap">
                 <div class="card-body">
                 <h5 class="card-title">Real Estate Data On Map</h5>
                 <p class="card-text">Αverage property price for each city district</p>
                 <button class="btn btn-dark" role="button"><a class="nav-link" href="/rent-data#map-results">Rent</a></button>
-                <button class="btn btn-dark" role="button"><router-link class="nav-link" :to="{name: 'SaleDataPage'}">Sale</router-link></button>
+                <button class="btn btn-dark" role="button"><a class="nav-link" href="/sale-data#map-results">Sale</a></button>
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import NavigationBar from './NavigationBar.vue';
+import NavigationBar from '../NavigationBar';
 export default {
     name: 'MainPage',
     components: {NavigationBar},
@@ -58,7 +58,7 @@ export default {
     .masthead {
   height: 100vh;
   min-height: 500px;
-  background-image: url("../assets/img/mainp.jpg");
+  background-image: url("../../assets/img/mainp.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

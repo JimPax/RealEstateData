@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import MainPage from '@/components/MainPage'
-import RentDataPage from '@/components/RentDataPage'
-import SaleDataPage from '@/components/SaleDataPage'
+import MainPage from '@/components/pages/MainPage'
+import RentDataPage from '@/components/pages/RentDataPage'
+import SaleDataPage from '@/components/pages/SaleDataPage'
 
 Vue.use(Router)
 
