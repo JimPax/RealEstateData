@@ -10,13 +10,13 @@
                     <div class="card col-md-6 mx-md-5">
                         <div class="card-body">
                             <h4 class="card-title">Price By City</h4>
-                            <price-by-city-chart v-if="getLoadedSaleAPI" />
+                            <price-by-city-chart :houseData="saleData" v-if="getLoadedSaleAPI" />
                         </div>
                     </div>
                     <div class="card col-md-6 mx-md-5">
                         <div class="card-body">
                             <h4 class="card-title">Price By Month</h4>
-                            <price-by-month-chart v-if="getLoadedSaleAPI" />
+                            <price-by-month-chart :houseData="saleData" v-if="getLoadedSaleAPI" />
                         </div>
                     </div>
                 </div>
@@ -27,12 +27,12 @@
                         <h3>Average Price By District</h3>
                     </div>
                     <div class="card-body">
-                        <Map @inputData="updateSearch" v-if="getLoadedSaleAPI"></Map>
+                        <Map :houseData="saleData" @inputData="updateSearch" v-if="getLoadedSaleAPI"></Map>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <h3 class="mx-auto">District Data</h3>
-                    <map-result :district="selectedDistrict" :cityGroup=selectedCity></map-result>
+                    <map-result :district="selectedDistrict" :cityGroup=selectedCity :houseData="saleData"></map-result>
                 </div>
             </div>
         </div>
@@ -41,10 +41,10 @@
 
 <script>
 import NavigationBar from './NavigationBar.vue'
-import PriceByMonthChart  from "./sale/PriceByMonthChart.vue"
-import PriceByCityChart from "./sale/PriceByCityChart.vue"
-import Map from './sale/Map.vue'
-import MapResult from "./sale/MapResult.vue"
+import PriceByMonthChart  from "./statisticalCharts/PriceByMonthChart.vue"
+import PriceByCityChart from "./statisticalCharts/PriceByCityChart.vue"
+import Map from './Map.vue'
+import MapResult from "./MapResult.vue"
 import {mapGetters} from 'vuex'
 
 export default {

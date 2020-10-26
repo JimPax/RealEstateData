@@ -1,5 +1,5 @@
 <template>
-    <table class="table" v-if="getLoadedSaleAPI">
+    <table class="table" v-if="getLoadedRentAPI">
         <tbody>
             <tr>
                 <th>City</th>
@@ -26,7 +26,7 @@ import {mapGetters} from 'vuex'
 
 export default {
     name:'MapResult',
-    props: ['district', 'cityGroup'],
+    props: ['district', 'cityGroup', 'houseData'],
     data() {
         return {
             cityName: "",
@@ -35,16 +35,15 @@ export default {
     },
     computed: {
         ...mapGetters([
-            'saleData',
-            'getLoadedSaleAPI'
+            'getLoadedRentAPI'
         ]),
         getAvgPrice() {
-            let price = this.saleData.filter(sale => sale.district === this.district & sale.city === this.cityGroup).map(sale => sale.price);
+            let price = this.houseData.filter(data => data.district === this.district & data.city === this.cityGroup).map(data => data.price);
             this.avgPrice = price.reduce((acc, cur) => acc + cur, 0) / price.length;
             if(isNaN(this.avgPrice)){
                 return '';
             }else {
-                return this.avgPrice + '$'
+                return this.avgPrice + '€'
             }
         },
         getDate() {

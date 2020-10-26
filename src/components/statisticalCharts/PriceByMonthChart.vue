@@ -13,7 +13,6 @@
 
 <script>
 import LineChart from '../charts/LineChart.vue'
-import { mapGetters } from 'vuex'
 
 const months = {"Jan": 1, "Feb": 2, "Mar" :3 , "Apr": 4, "May": 5, "Jun": 6, "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12}
 
@@ -21,6 +20,7 @@ export default {
     components: {
         LineChart
     },
+    props: ['houseData'],
     data () {
         return {
             datacollection: {},
@@ -29,30 +29,27 @@ export default {
         }
     },
     computed: {
-        ...mapGetters ([
-            'rentData'
-        ]),
         getPriceByMonth () {
             
             let pricebyMonth;
-            let rentData = this.rentData;
+            let houseData = this.houseData;
             let avgPBM = [];
             Object.keys(months).forEach(function(month) {
-            pricebyMonth = rentData.filter(rent => rent.date === month).map(rent => rent.price);
+            pricebyMonth = houseData.filter(data => data.date === month).map(data => data.price);
             avgPBM.push(pricebyMonth.reduce((acc, cur) => acc + cur, 0) / pricebyMonth.length);
             })
             return Array.from(avgPBM, item => item || 0);
             
         },
         getPBMByCity () {
-            let choosedCity = this.rentData.filter(rent => rent.city === this.selectedCity).map(x => x.city) 
+            let choosedCity = this.houseData.filter(data => data.city === this.selectedCity).map(data => data.city) 
             choosedCity = choosedCity.filter((item,index) => choosedCity.indexOf(item) === index).toString()
 
             let pricebyMonth;
-            let rentData = this.rentData;
+            let houseData = this.houseData;
             let avgPBMByCity = [];
             Object.keys(months).forEach(function(month) {
-            pricebyMonth = rentData.filter(rent => rent.date === month && rent.city === choosedCity).map(rent => rent.price);
+            pricebyMonth = houseData.filter(data => data.date === month && data.city === choosedCity).map(data => data.price);
             avgPBMByCity.push(pricebyMonth.reduce((acc, cur) => acc + cur, 0) / pricebyMonth.length);
             })
             return Array.from(avgPBMByCity, item => item || 0);
@@ -60,7 +57,7 @@ export default {
     },
     mounted () {
         this.fillData(),
-        this.cities = this.rentData.map(x => x.city);
+        this.cities = this.houseData.map(x => x.city);
         return this.cities = this.cities.filter((item,index) => this.cities.indexOf(item) === index)
     },
     methods: {

@@ -33,7 +33,6 @@
 import {LMap, LTileLayer, LMarker, LPopup } from 'vue2-leaflet'
 import {Icon} from 'leaflet'
 import MapResult from './MapResult.vue'
-import {mapGetters} from 'vuex'
 
 // Fix Marker Icons are missing
 delete Icon.Default.prototype._getIconUrl;
@@ -46,6 +45,7 @@ Icon.Default.mergeOptions({
 export default {
     name:'Map',
     components: { LMap, LTileLayer, LMarker, LPopup },
+    props: ['houseData'],
     data() {
         return {
             cityLabel:'',
@@ -62,11 +62,11 @@ export default {
         }
     },
     mounted() {
-        this.cities = this.saleData.map(x => x.city);
+        this.cities = this.houseData.map(x => x.city);
         this.cities = [...new Set(this.cities)].sort();
-        let saleData = this.saleData;
+        let houseData = this.houseData;
         this.cities.forEach(city => {
-            let dbc = [...new Set(saleData.filter(sale => sale.city === city).map(sale => sale.district).sort())];
+            let dbc = [...new Set(houseData.filter(data => data.city === city).map(data => data.district).sort())];
             this.districts.push(dbc);
         });
         console.log(this.districts);
@@ -75,11 +75,6 @@ export default {
             res[cities[index]] = field;
             return res;
         },{})
-    },
-    computed: {
-        ...mapGetters([
-            'saleData'
-        ]),
     },
     methods: {
         latLng: function(lat, lng) {
