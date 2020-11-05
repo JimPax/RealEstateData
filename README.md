@@ -1,6 +1,7 @@
 # realestate
 
 > A Vue.js project on housing data(mock data) for real estate price statistics. Graphs and maps by region and season are used.
+Live App link: http://realestatedata.epizy.com/
 
 ## Build Setup
 
